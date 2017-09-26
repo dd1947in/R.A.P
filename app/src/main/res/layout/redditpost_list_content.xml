@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_sr_displayname"
+            android:layout_width="wrap_content"
+            android:textSize="10sp"
+            android:textColor="@color/colorPrimary"
+            android:layout_height="12dp"
+            android:contentDescription="@string/cd_tv_sr_displayname"
+            />
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:textSize="10sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_height="12dp"
+
+                android:text="                  "
+                android:contentDescription="       "
+                />
+            <TextView
+                android:id="@+id/tv_post_type"
+                android:layout_width="wrap_content"
+                android:textSize="10sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_height="12dp"
+                android:textStyle="bold|italic"
+                android:text="@string/text_tv_post_type_link"
+                android:contentDescription="@string/cd_tv_post_type"
+                />
+
+        </LinearLayout>
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:textSize="12sp"
+        android:textColor="@color/colorPrimary"
+        android:contentDescription="@string/cd_tv_title"
+        />
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/iv_thumbnail"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:contentDescription="@string/cd_iv_thumbnail"
+        android:layout_gravity="center_vertical|center" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/v_separator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:contentDescription="@string/cd_v_separator"
+        android:background="@color/colorPrimaryDark"/>
+
+</LinearLayout>

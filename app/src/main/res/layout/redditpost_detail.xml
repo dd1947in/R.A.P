@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/redditpost_detail"
+    style="?android:attr/textAppearanceLarge"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:textIsSelectable="true"
+    tools:context="com.example.uadnd.cou8901.rap.ui.RedditPostDetailFragment" />-->
+
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.uadnd.cou8901.rap.ui.RedditPostDetailFragment">
+
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/tv_title"
+        android:text="Title"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        android:layout_width="364dp"
+        android:layout_height="69dp"
+        android:padding="16dp"
+        android:textIsSelectable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/sepv_post_video"
+        app:layout_constraintVertical_bias="0.372"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/tv_view_comments"
+        android:layout_width="323dp"
+        android:layout_height="58dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:padding="16dp"
+        android:text="View Comments"
+        android:textColor="@color/colorPrimary"
+        android:textAlignment="center"
+        android:textIsSelectable="true"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        app:layout_constraintVertical_bias="0.035"
+        app:layout_constraintHorizontal_bias="0.512" />
+
+    <ImageView
+        android:id="@+id/iv_post_image"
+        android:layout_width="365dp"
+        android:layout_height="227dp"
+        android:src="@drawable/icons8internetbrowser50"
+        tools:layout_editor_absoluteX="10dp"
+        android:visibility="invisible"
+        android:layout_marginTop="16dp"
+
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+    <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+        android:id="@+id/sepv_post_video"
+        android:layout_width="370dp"
+        android:layout_height="230dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:visibility="invisible"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </com.google.android.exoplayer2.ui.SimpleExoPlayerView>
+
+    <LinearLayout
+        android:layout_width="357dp"
+        android:layout_height="53dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="13dp"
+        android:orientation="horizontal"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sepv_post_video"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageButton
+            android:id="@+id/iv_thumbs_up"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/icons8thumbsup48"
+            app:srcCompat="@drawable/icons8thumbsup48" />
+
+        <ImageButton
+            android:id="@+id/iv_thumbs_down"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/icons8thumbsdown48"
+            app:srcCompat="@drawable/icons8thumbsdown48" />
+
+        <ImageButton
+            android:id="@+id/iv_share"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/icons8share48"
+            app:srcCompat="@drawable/icons8share48" />
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
+
+
+

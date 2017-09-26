@@ -1,0 +1,2 @@
+-dontwarn com.squareup.picasso.**
+-dontwarn com.squareup.okhttp.**

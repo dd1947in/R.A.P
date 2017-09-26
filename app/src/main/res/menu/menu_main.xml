@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.uadnd.cou8901.rap.ui.RedditPostListActivity">
+    <item
+        android:id="@+id/refresh_button"
+        android:icon="@drawable/icons8refresh48"
+        android:title="@string/title_refresh_button"
+        android:contentDescription="@string/cd_refresh_button"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/star_button"
+        android:icon="@drawable/icons8starfilled48"
+        android:title="@string/title_star_button"
+        android:contentDescription="@string/cd_star_button"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/user_button"
+        android:icon="@drawable/icons8user48"
+        android:title="@string/title_user_button"
+        android:contentDescription="@string/title_user_button"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+</menu>

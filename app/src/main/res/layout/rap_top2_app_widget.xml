@@ -1,0 +1,232 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="240dp"
+    android:layout_height="100dp"
+    android:background="#09C"
+    android:padding="@dimen/widget_margin"
+    android:orientation="vertical">
+
+<LinearLayout
+    android:layout_width="240dp"
+    android:layout_height="20dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/appwidget_text_heading"
+        android:layout_width="240dp"
+        android:layout_height="20dp"
+        android:layout_alignParentStart="true"
+
+
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="4dp"
+        android:background="#09C"
+        android:contentDescription="@string/appwidget_text"
+        android:gravity="left"
+        android:text="@string/appwidget_text"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="240dp"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/appwidget_text_1"
+            android:layout_width="204dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="4dp"
+            android:background="#09C"
+            android:contentDescription="Title"
+            android:gravity="left"
+            android:text="Title"
+            android:textColor="#ffffff"
+            android:textSize="10sp"
+            android:textStyle="italic" />
+
+        <ImageView
+            android:id="@+id/iv_appwidget_1"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:src="@drawable/icons8internetbrowser50"
+            app:srcCompat="@drawable/icons8internetbrowser50" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="240dp"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/appwidget_text_2"
+            android:layout_width="202dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="4dp"
+            android:background="#09C"
+            android:contentDescription="Title"
+            android:gravity="left"
+            android:text="Title"
+            android:textColor="#ffffff"
+            android:textSize="10sp"
+            android:textStyle="italic" />
+
+        <ImageView
+            android:id="@+id/iv_appwidget_2"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:src="@drawable/icons8internetbrowser50"
+            app:srcCompat="@drawable/icons8internetbrowser50" />
+    </LinearLayout>
+</LinearLayout>
+
+        <!--
+        <LinearLayout
+            android:id="@+id/appwidget_clickview_h2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/appwidget_text_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#09C"
+                android:contentDescription="Title2"
+                android:text="Title2"
+                android:textColor="#ffffff"
+                android:textSize="10sp"
+                android:textStyle="italic"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="108dp" />
+            <ImageView
+                android:id="@+id/iv_h2"
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+
+        </LinearLayout>
+        -->
+
+
+    <!--</LinearLayout>-->
+
+
+
+<!--
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:background="#09C"
+    android:padding="@dimen/widget_margin">
+    <LinearLayout
+        android:id="@+id/appwidget_clickview_v1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/appwidget_clickview_hh"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/appwidget_text_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#09C"
+        android:contentDescription="@string/appwidget_text"
+        android:text="@string/appwidget_text"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="108dp" />
+        <ImageView
+            android:id="@+id/iv_hh"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+        </LinearLayout>
+    <LinearLayout
+        android:id="@+id/appwidget_clickview_h1"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:orientation="horizontal">
+
+    <TextView
+            android:id="@+id/appwidget_text_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#09C"
+            android:contentDescription="Title1"
+            android:text="Title1"
+            android:textColor="#ffffff"
+            android:textSize="10sp"
+            android:textStyle="italic"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="108dp" />
+        <ImageView
+            android:id="@+id/iv_h1"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/appwidget_clickview_h2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <TextView
+            android:id="@+id/appwidget_text_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#09C"
+            android:contentDescription="Title2"
+            android:text="Title2"
+            android:textColor="#ffffff"
+            android:textSize="10sp"
+            android:textStyle="italic"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="108dp" />
+        <ImageView
+            android:id="@+id/iv_h2"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+
+    </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>
+-->

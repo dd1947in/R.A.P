@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "668349891628",
+    "firebase_url": "https://reddit-app-project.firebaseio.com",
+    "project_id": "reddit-app-project",
+    "storage_bucket": "reddit-app-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:668349891628:android:9a8999bd1bc4bbe9",
+        "android_client_info": {
+          "package_name": "com.example.uadnd.cou8901.rap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "668349891628-k9g7ionk5cab6vo8q1q8hq5aku08j7bh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.uadnd.cou8901.rap",
+            "certificate_hash": "b9116ff7f7c321079e9829142d1368f0ffeca7ce"
+          }
+        },
+        {
+          "client_id": "668349891628-br3g86vqmhc39n2f8u8vpbapma780out.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwniqe54uKGphTxRQd_zFb58f6q-bqrno"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "668349891628-br3g86vqmhc39n2f8u8vpbapma780out.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
