@@ -173,7 +173,7 @@ public class RedditPostListActivity extends AppCompatActivity  implements
         int id = item.getItemId();
         Timber.d(TAG +":onOptionsItemSelected");
         if (id == R.id.action_settings) {
-            Toast.makeText(this, "Action Settings", Toast.LENGTH_LONG).show();
+            //Toast.makeText(this, "Action Settings", Toast.LENGTH_LONG).show();
             return true;
         } else if(id == R.id.refresh_button)  {
             //Toast.makeText(this, "Download Button", Toast.LENGTH_LONG).show();

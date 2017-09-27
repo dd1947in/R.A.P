@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.support.annotation.Nullable;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -60,6 +61,7 @@ import static android.preference.PreferenceManager.getDefaultSharedPreferences;
  */
 public class RedditPostDetailFragment extends Fragment   implements View.OnClickListener, ExoPlayer.EventListener{
     private static final String TAG =   "PostDetailFragment";
+    private static final String SIMPLE_EXO_PLAYER_POSITION = "SIMPLE_EXO_PLAYER_POSITION";
     private Tracker mTracker;
     private Context mContext;
 
@@ -75,6 +77,7 @@ public class RedditPostDetailFragment extends Fragment   implements View.OnClick
     private  MediaSessionCompat mMediaSession;
     private PlaybackStateCompat.Builder mStateBuilder;
     private NotificationManager mNotificationManager;
+    private long mExoPlayerPosition = 0L;
 
 
 
@@ -122,7 +125,13 @@ public class RedditPostDetailFragment extends Fragment   implements View.OnClick
         }
         mTracker.setScreenName(TAG);
         mTracker.send(new HitBuilders.ScreenViewBuilder().build());
+
+        if(savedInstanceState != null) {
+            mExoPlayerPosition = savedInstanceState.getLong(SIMPLE_EXO_PLAYER_POSITION);
+        }
+
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -147,7 +156,7 @@ public class RedditPostDetailFragment extends Fragment   implements View.OnClick
 
                                                       @Override
                                                       public void onClick(View view) {
-                                                          Toast.makeText(mContext, "Voted Up", Toast.LENGTH_SHORT).show();
+                                                          Toast.makeText(mContext, getString(R.string.toast_vote_up), Toast.LENGTH_SHORT).show();
                                                           new AsyncVoteReddit().execute(post.getId(), "1"); // Vote Up
                                                       }
                                                   }
@@ -157,7 +166,7 @@ public class RedditPostDetailFragment extends Fragment   implements View.OnClick
 
                                                       @Override
                                                       public void onClick(View view) {
-                                                          Toast.makeText(mContext, "Voted Down", Toast.LENGTH_SHORT).show();
+                                                          Toast.makeText(mContext, getString(R.string.toast_vote_down), Toast.LENGTH_SHORT).show();
                                                           new AsyncVoteReddit().execute(post.getId(), "-1"); // Vote Down
                                                       }
                                                   }
@@ -180,10 +189,10 @@ public class RedditPostDetailFragment extends Fragment   implements View.OnClick
                     @Override
                     public void onClick(View v) {
                         // do something when the buttonLogin is clicked
-                        System.out.println("https://www.reddit.com"+post.getPermalink());
+                        //System.out.println("https://www.reddit.com"+post.getPermalink());
                         String permaLink = post.getPermalink();
                         if(permaLink == null || permaLink.equals("null")) {
-                            Toast.makeText(getActivity(), "No Comments Link for this Post", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getActivity(), getString(R.string.toast_no_comments_link), Toast.LENGTH_SHORT).show();
                         } else {
                             Uri webpage = Uri.parse("https://www.reddit.com"+post.getPermalink());
                             Intent viewCommentsIntent = new Intent(Intent.ACTION_VIEW, webpage);
@@ -195,6 +204,9 @@ public class RedditPostDetailFragment extends Fragment   implements View.OnClick
                     }
 
             });
+            if(savedInstanceState != null) {
+                mExoPlayerPosition = savedInstanceState.getLong("SIMPLE_EXO_PLAYER_POSITION");
+            }
         }
         int mediaUrlHandler = bundle.getInt("MEDIA_HANDLER");
         switch (mediaUrlHandler) {
@@ -227,52 +239,27 @@ public class RedditPostDetailFragment extends Fragment   implements View.OnClick
         }
 
 
-/*
-        if(isVideoUrl(post.getUrl())) {   // Direct video URLs , use Simple Exo Player
-            mImageView.setVisibility(View.INVISIBLE);
-            mPlayerView.setVisibility(View.VISIBLE);
-            initializeMediaSession();
-            initializePlayer(Uri.parse(post.getUrl()));
 
-        }else if(isImageUrl(post.getUrl()))  {   // Direct image URL, load them into image view with Picasso
-            mPlayerView.setVisibility(View.INVISIBLE);
-            mImageView.setVisibility(View.VISIBLE);
-            Picasso.with(mContext).load(post.getUrl()).fit().into(mImageView);
-
-         } else {   // Everything must be launched into a browser.
-            //Launch a webview intent
-            mPlayerView.setVisibility(View.INVISIBLE);
-            mImageView.setVisibility(View.INVISIBLE);
-            Uri webpage = Uri.parse(post.getUrl());
-            Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
-            if (intent.resolveActivity(mContext.getPackageManager()) != null) {
-                startActivity(intent);
-            }
-
-        }
-        */
 
         mTracker.setScreenName(TAG);
         mTracker.send(new HitBuilders.ScreenViewBuilder().build());
         return rootView;
     }
-    /*
-    private boolean isVideoUrl(String url) {
-        if(url.endsWith(".mp4") ) {
-            return true;
-        } else {
-            return false;
-        }
 
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        outState.putLong(SIMPLE_EXO_PLAYER_POSITION, mExoPlayerPosition);
+        super.onSaveInstanceState(outState);
     }
-    private boolean isImageUrl(String url) {
-        if(url.endsWith(".jpg") || url.endsWith(".gif") || url.endsWith(".png") || url.endsWith(".svg")) {
-            return true;
-        } else {
-            return false;
+
+    @Override
+    public void onViewStateRestored(@Nullable Bundle savedInstanceState) {
+        super.onViewStateRestored(savedInstanceState);
+        if(savedInstanceState != null) {
+            mExoPlayerPosition = savedInstanceState.getLong(SIMPLE_EXO_PLAYER_POSITION);
         }
     }
-*/
+
     private void initializeMediaSession() {
 
         // Create a MediaSessionCompat.
@@ -345,11 +332,21 @@ public class RedditPostDetailFragment extends Fragment   implements View.OnClick
     public void onPause() {
         super.onPause();
         if(mExoPlayer != null) {
+            mExoPlayerPosition = mExoPlayer.getCurrentPosition();
             mExoPlayer.stop();
             mExoPlayer.release();
             mExoPlayer = null;
         }
 
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if(mExoPlayer != null) {
+            mExoPlayer.seekTo(mExoPlayerPosition);
+
+        }
     }
 
     @Override

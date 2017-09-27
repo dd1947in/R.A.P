@@ -61,7 +61,8 @@
             android:layout_width="30dp"
             android:layout_height="40dp"
             android:src="@drawable/icons8internetbrowser50"
-            app:srcCompat="@drawable/icons8internetbrowser50" />
+            app:srcCompat="@drawable/icons8internetbrowser50"
+            android:contentDescription="@string/cd_iv_appwidget_1"/>
     </LinearLayout>
 
 
@@ -92,7 +93,8 @@
             android:layout_width="30dp"
             android:layout_height="40dp"
             android:src="@drawable/icons8internetbrowser50"
-            app:srcCompat="@drawable/icons8internetbrowser50" />
+            app:srcCompat="@drawable/icons8internetbrowser50"
+            android:contentDescription="@string/cd_iv_appwidget_2"/>
     </LinearLayout>
 </LinearLayout>
 

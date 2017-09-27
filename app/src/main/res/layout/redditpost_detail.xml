@@ -116,7 +116,8 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:src="@drawable/icons8thumbsup48"
-            app:srcCompat="@drawable/icons8thumbsup48" />
+            app:srcCompat="@drawable/icons8thumbsup48"
+            android:contentDescription="@string/cd_iv_thumbs_up"/>
 
         <ImageButton
             android:id="@+id/iv_thumbs_down"

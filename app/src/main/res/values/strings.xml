@@ -114,4 +114,15 @@
     <string name="SCROLLY">SCROLLY</string>
 
 
+    <string name="cd_iv_appwidget_1">Top 1 Post</string>
+    <string name="cd_iv_appwidget_2">Top 2 Post</string>
+
+    <string name="cd_iv_post_image">Reddit Post Image</string>
+    <string name="cd_iv_thumbs_up">Vote Up</string>
+    <string name="cd_iv_thumbs_down">Vote Down</string>
+    <string name="cd_iv_share">Share</string>
+
+    <string name="toast_vote_up">Voted Up</string>
+    <string name="toast_vote_down">Voted Down</string>
+    <string name="toast_no_comments_link">No Comments Link for this Post</string>
 </resources>
