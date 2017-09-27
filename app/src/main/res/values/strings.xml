@@ -125,4 +125,80 @@
     <string name="toast_vote_up">Voted Up</string>
     <string name="toast_vote_down">Voted Down</string>
     <string name="toast_no_comments_link">No Comments Link for this Post</string>
+
+
+
+    <string name="cd_tv_user_subreddits">User Subreddts</string>
+    <string name="text_tv_user_subreddits">User Subreddts</string>
+
+    <string name="cd_tv_user_property_label">Property Name</string>
+    <string name="text_tv_user_property_label">Property Name</string>
+
+    <string name="cd_tv_user_property_value">Property Value</string>
+    <string name="text_tv_user_property_value">Property Value</string>
+
+    <string name="cd_tv_id_label">Id Label</string>
+    <string name="text_tv_id_label">Id Label</string>
+
+    <string name="cd_tv_id_value">Id Value</string>
+    <string name="text_tv_id_value">Id Value</string>
+
+    <string name="cd_tv_name_label">Name Label</string>
+    <string name="text_tv_name_label">Name Label</string>
+    <string name="cd_tv_name_value">Name Value</string>
+    <string name="text_tv_name_value">Name Value</string>
+
+
+    <string name="cd_tv_created_label">Created Label</string>
+    <string name="text_tv_created_label">Created Label</string>
+    <string name="cd_tv_created_value">Created Value</string>
+    <string name="text_tv_created_value">Created Value</string>
+
+    <string name="cd_tv_created_utc_label">Created UTC Label</string>
+    <string name="text_tv_created_utc_label">Created UTC Label</string>
+    <string name="cd_tv_created_utc_value">Created UTC Value</string>
+    <string name="text_tv_created_utc_value">Created UTC Value</string>
+
+    <string name="cd_tv_over_18_label">Over 18 Label</string>
+    <string name="text_tv_over_18_label">Over 18 Label</string>
+    <string name="cd_tv_over_18_value">Over 18 Value</string>
+    <string name="text_tv_over_18_value">Over 18 Value</string>
+
+    <string name="cd_tv_has_verified_email_label">Has Verified Email Label</string>
+    <string name="text_tv_has_verified_email_label">Has Verified Email Label</string>
+    <string name="cd_tv_has_verified_email_value">Has Verified Email Value</string>
+    <string name="text_tv_has_verified_email_value">Has Verified Email Value</string>
+
+    <string name="cd_tv_oauth_client_id_label">OAuth Client Id Label</string>
+    <string name="text_tv_oauth_client_id_label">OAuth Client Id Label</string>
+    <string name="cd_tv_oauth_client_id_value">OAuth Client Id Value</string>
+    <string name="text_tv_oauth_client_id_value">OAuth Client Id Value</string>
+
+    <string name="cd_tv_token_issue_time_label">Token Issue Time Label</string>
+    <string name="text_tv_token_issue_time_label">Token Issue Time Label</string>
+    <string name="cd_tv_token_issue_time_value">Token Issue Time Value</string>
+    <string name="text_tv_token_issue_time_value">Token Issue Time Value</string>
+
+    <string name="cd_tv_token_expire_time_label">Token Expire Time Label</string>
+    <string name="text_tv_token_expire_time_label">Token Expire Time Label</string>
+    <string name="cd_tv_token_expire_time_value">Token Expire Time Value</string>
+    <string name="text_tv_token_expire_time_value">Token Expire Time Value</string>
+
+    <string name="cd_tv_access_token_label">Access Token Label</string>
+    <string name="text_tv_access_token_label">Access Token Label</string>
+    <string name="cd_tv_access_token_value">Access Token Value</string>
+    <string name="text_tv_access_token_value">Access Token Value</string>
+
+    <string name="text_appwidget_text_1">Title 1</string>
+    <string name="cd_appwidget_text_1">Title 1</string>
+    <string name="text_appwidget_text_2">Title 2</string>
+    <string name="cd_appwidget_text_2">Title 2</string>
+
+    <string name="text_tv_title">Title</string>
+    <string name="text_tv_spaces_1">\u0020\u0020\u0020\u0020\u0020\u0020</string>
+    <string name="cd_tv_spaces_1">Blank spaces</string>
+
+    <string name="text_tv_view_comments">View Comments</string>
+    <string name="cd_tv_view_comments">View Comments</string>
+
 </resources>

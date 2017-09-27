@@ -29,10 +29,10 @@
         tools:context="com.example.uadnd.cou8901.rap.ui.RedditPostListActivity"
         tools:listitem="@layout/redditpost_list_content" />
 
-    <FrameLayout
+    <!--FrameLayout
         android:id="@+id/redditpost_detail_container"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="3" />
+        android:layout_weight="3" /-->
 
 </LinearLayout>

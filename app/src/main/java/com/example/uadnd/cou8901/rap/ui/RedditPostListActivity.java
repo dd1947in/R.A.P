@@ -289,6 +289,7 @@ public class RedditPostListActivity extends AppCompatActivity  implements
             final String postTitle = mCursor.getString(mCursor.getColumnIndex(RAPContract.Posts.COLUMN_TITLE));
             final String postThumbnail = mCursor.getString(mCursor.getColumnIndex(RAPContract.Posts.COLUMN_THUMBNAIL));
             final String postSubreddit = mCursor.getString(mCursor.getColumnIndex(RAPContract.Posts.COLUMN_SUBREDDIT));
+            final String prefixPostSubreddit = "r/" + postSubreddit;
             final String postSubredditType = mCursor.getString(mCursor.getColumnIndex(RAPContract.Posts.COLUMN_SUBREDDIT_TYPE));
             final String postCreated = mCursor.getString(mCursor.getColumnIndex(RAPContract.Posts.COLUMN_CREATED));
             final String postUps = mCursor.getString(mCursor.getColumnIndex(RAPContract.Posts.COLUMN_UPS));
@@ -319,7 +320,7 @@ public class RedditPostListActivity extends AppCompatActivity  implements
 
 
             holder.mTitleTextView.setText(postTitle);
-            holder.mSubredditTextView.setText("r/"+postSubreddit);
+            holder.mSubredditTextView.setText(prefixPostSubreddit);
             if(postThumbnail == null || postThumbnail.equalsIgnoreCase("null") || postThumbnail.equalsIgnoreCase("self") || postThumbnail.equalsIgnoreCase("")) {
                 holder.mThumbnailImageView.setImageResource(R.drawable.icons8notapplicable48);
 

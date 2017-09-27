@@ -12,7 +12,7 @@ android {
     }
 
     compileSdkVersion 26
-    buildToolsVersion "26.0.0"
+    buildToolsVersion "26.0.1"
     defaultConfig {
         applicationId "com.example.uadnd.cou8901.rap"
         minSdkVersion 19
