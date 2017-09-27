@@ -19,7 +19,7 @@
             android:layout_width="100dp"
             android:layout_height="match_parent"
             android:layout_weight="0.33"
-            android:gravity="left"
+            android:gravity="start"
             android:text="Property Name"
             android:textColor="@color/colorPrimary"
             android:textSize="16sp"
@@ -50,7 +50,7 @@
             android:layout_height="match_parent"
             android:layout_weight="0.33"
             android:textColor="@color/colorPrimary"
-            android:gravity="left"
+            android:gravity="start"
             android:textSize="12sp"
             android:text="label1" />
 
@@ -76,7 +76,7 @@
             android:layout_height="match_parent"
             android:layout_weight="0.33"
             android:textColor="@color/colorPrimary"
-            android:gravity="left"
+            android:gravity="start"
             android:text="label1" />
 
         <TextView
@@ -101,7 +101,7 @@
             android:layout_height="match_parent"
             android:layout_weight="0.33"
             android:textColor="@color/colorPrimary"
-            android:gravity="left"
+            android:gravity="start"
             android:text="label1" />
 
         <TextView
@@ -127,7 +127,7 @@
             android:layout_weight="0.33"
             android:textSize="12sp"
             android:textColor="@color/colorPrimary"
-            android:gravity="left"
+            android:gravity="start"
             android:text="label1" />
 
         <TextView
@@ -153,7 +153,7 @@
             android:layout_weight="0.33"
             android:textSize="12sp"
             android:textColor="@color/colorPrimary"
-            android:gravity="left"
+            android:gravity="start"
             android:text="label1" />
 
         <TextView
@@ -178,7 +178,7 @@
             android:layout_weight="0.33"
             android:textColor="@color/colorPrimary"
             android:textSize="12sp"
-            android:gravity="left"
+            android:gravity="start"
             android:text="label1" />
 
         <TextView
@@ -203,7 +203,7 @@
             android:layout_height="match_parent"
             android:layout_weight="0.33"
             android:textColor="@color/colorPrimary"
-            android:gravity="left"
+            android:gravity="start"
             android:textSize="12sp"
             android:text="label1" />
 
@@ -231,7 +231,7 @@
             android:layout_weight="0.33"
             android:textSize="12sp"
             android:textColor="@color/colorPrimary"
-            android:gravity="left"
+            android:gravity="start"
             android:text="label1" />
 
         <TextView
@@ -257,7 +257,7 @@
             android:layout_weight="0.33"
             android:textSize="12sp"
             android:textColor="@color/colorPrimary"
-            android:gravity="left"
+            android:gravity="start"
             android:text="label1" />
 
         <TextView
@@ -283,7 +283,7 @@
             android:layout_weight="0.33"
             android:textSize="12sp"
             android:textColor="@color/colorPrimary"
-            android:gravity="left"
+            android:gravity="start"
             android:text="label1" />
 
         <TextView
